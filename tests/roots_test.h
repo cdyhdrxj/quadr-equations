@@ -8,7 +8,7 @@ extern "C" {
 #include "func.h"
 }
 
-double abs_error = 0.000001;
+const double abs_error = 0.000001;
 
 TEST(rootsTest, two_solves) {
     roots res = quadr_equation(4, 1, 0);
