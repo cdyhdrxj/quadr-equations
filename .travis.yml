@@ -1,5 +1,4 @@
-language
-- cpp
+language: c
 
 before_install:
 - pip install --user cpp-coveralls
@@ -16,10 +15,8 @@ script:
 - ./tests/tests
 
 after_success:
-- coveralls --root . -E ".*external.*" \
-	-E ".*tests.*"
-- build-wrapper-linux-x86-64 --out-dir \
-	bw-output make clean all
+- coveralls --root . -E ".*external.*" -E ".*tests.*"
+- build-wrapper-linux-x86-64 --out-dir bw-output make clean all
 - sonar-scanner
 
 cache:
