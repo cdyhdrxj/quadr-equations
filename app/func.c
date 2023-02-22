@@ -4,34 +4,34 @@
 
 roots quadr_equation(double a, double b, double c) {
     roots result;
-	if (a == 0) {
-		if (b == 0) {
+    if (a == 0) {
+        if (b == 0) {
             if (c == 0) {
                 /* Бесконечное количество решений */
                 result.first = INFINITY;
                 result.second = INFINITY;
             }
-			else {
+            else {
                 /* Нет решений */
                 result.first = NAN;
                 result.second = NAN;
-			}
-		}
-		else {
-			if (c == 0) {
+            }
+        }
+        else {
+            if (c == 0) {
                 result.first = 0;
                 result.second = 0;
-			}
-			else {	
+            }
+            else {
                 result.first = -c / b;
                 result.second = -c / b;
-			}
-		}
-	}
-	else {
+            }
+        }
+    }
+    else {
         double discr = b*b - 4*a*c;
-		if (discr >= 0) {
-			double sqrt_discr = sqrt(discr);
+        if (discr >= 0) {
+            double sqrt_discr = sqrt(discr);
             double x1 = (-b - sqrt_discr) / (2*a);
             double x2 = (-b + sqrt_discr) / (2*a);
 
@@ -43,12 +43,12 @@ roots quadr_equation(double a, double b, double c) {
                 result.first = x2;
                 result.second = x1;
             }
-		}
-		else {
+        }
+        else {
             result.first = NAN;
             result.second = NAN;
-		}
-	}
+        }
+    }
 
     return result;
 }

@@ -1,1 +1,5 @@
+[![CI/CD GitHub Actions](https://github.com/cdyhdrxj/quadr-equations/actions/workflows/test-action.yml/badge.svg)](https://github.com/cdyhdrxj/quadr-equations/actions/workflows/test-action.yml)
 [![Coverage Status](https://coveralls.io/repos/github/cdyhdrxj/quadr-equations/badge.svg?branch=main)](https://coveralls.io/github/cdyhdrxj/quadr-equations?branch=main)
+[![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=cdyhdrxj_quadr-equations&metric=alert_status)](https://sonarcloud.io/summary/new_code?id=cdyhdrxj_quadr-equations)
+[![Bugs](https://sonarcloud.io/api/project_badges/measure?project=cdyhdrxj_quadr-equations&metric=bugs)](https://sonarcloud.io/summary/new_code?id=cdyhdrxj_quadr-equations)
+[![Code Smells](https://sonarcloud.io/api/project_badges/measure?project=cdyhdrxj_quadr-equations&metric=code_smells)](https://sonarcloud.io/summary/new_code?id=cdyhdrxj_quadr-equations)
