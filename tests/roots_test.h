@@ -10,7 +10,7 @@ extern "C" {
 
 const double abs_error = 0.000001;
 
-TEST(rootsTest, two_solves) {
+TEST(rootsTest, two_solutions) {
     roots res = quadr_equation(4, 1, 0);
     ASSERT_DOUBLE_EQ(-0.25, res.first);
     ASSERT_DOUBLE_EQ(0, res.second);
@@ -28,7 +28,7 @@ TEST(rootsTest, two_solves) {
     ASSERT_NEAR(0.6180339888, res.second, abs_error);
 }
 
-TEST(rootsTest, one_solve) {
+TEST(rootsTest, one_solution) {
     roots res = quadr_equation(-1.23, 0, 0);
     ASSERT_DOUBLE_EQ(0, res.first);
     ASSERT_DOUBLE_EQ(0, res.second);
@@ -42,7 +42,7 @@ TEST(rootsTest, one_solve) {
     ASSERT_DOUBLE_EQ(-1.23, res.second);
 }
 
-TEST(rootsTest, no_solves) {
+TEST(rootsTest, no_solutions) {
     roots res = quadr_equation(-0.1, 0.5, -0.7);
     ASSERT_TRUE(isnan(res.first));
     ASSERT_TRUE(isnan(res.second));
