@@ -69,6 +69,8 @@ TEST(rootsTest, non_quadr_equation) {
 
     res = quadr_equation(0, 0, 100);
     ASSERT_EQ(0, res.num);
+    ASSERT_TRUE(isnan(res.first));
+    ASSERT_TRUE(isnan(res.second));
 
     res = quadr_equation(0, 100, 0);
     ASSERT_EQ(1, res.num);

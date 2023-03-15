@@ -23,6 +23,3 @@ SOURCES +=     main.cpp \
     ../app/func.c
 
 INCLUDEPATH += ../app
-
-DISTFILES += \
-    input/TestSTDOut_output.txt
