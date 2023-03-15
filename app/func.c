@@ -50,8 +50,10 @@ roots quadr_equation(double a, double b, double c) {
     if (fabs(a*c) > DBL_MAX / 4)
         return result;
 
-    if ((4*a*c < 0) && (b*b > DBL_MAX + 4*a*c))
+    if ((4*a*c < 0) && (b*b > DBL_MAX + 4*a*c)){
+        printf("Hi!\n");
         return result;
+    }
 
     if (b*b < 4*a*c) {
         result.num = 0;

@@ -3,7 +3,7 @@
 #include "func.h"
 
 int main() {
-    roots res = quadr_equation(-10e-310, 1, -1);
+    roots res = quadr_equation(1, 1, 1);
     if (res.num == -1)
         printf("Overflow\n");
     else {
