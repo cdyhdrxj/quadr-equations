@@ -92,12 +92,12 @@ TEST(rootsTest, overflow){
     ASSERT_TRUE(isnan(res.first));
     ASSERT_TRUE(isnan(res.second));
 
-    res = quadr_equation(1, 1.79e308, 1);
+    res = quadr_equation(0.45e308, 1, -1);
     ASSERT_EQ(-1, res.num);
     ASSERT_TRUE(isnan(res.first));
     ASSERT_TRUE(isnan(res.second));
 
-    res = quadr_equation(1.44e308, 1e154, -1);
+    res = quadr_equation(0.44e308, 1e154, -1);
     ASSERT_EQ(-1, res.num);
     ASSERT_TRUE(isnan(res.first));
     ASSERT_TRUE(isnan(res.second));

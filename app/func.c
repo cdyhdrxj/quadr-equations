@@ -41,17 +41,25 @@ roots quadr_equation(double a, double b, double c) {
     result.first = NAN;
     result.second = NAN;
 
-    if (fabs(b) > DBL_MAX / fabs(b))
+    if (fabs(b) > DBL_MAX / fabs(b)){
+        printf("1\n");
         return result;
+    }
 
-    if (fabs(a) > DBL_MAX / fabs(c))
+    if (fabs(a) > DBL_MAX / fabs(c)){
+        printf("2\n");
         return result;
+    }
 
-    if (fabs(a*c) > DBL_MAX / 4)
+    if (fabs(a*c) > DBL_MAX / 4){
+        printf("3\n");
         return result;
+    }
 
-    if ((4*a*c < 0) && (b*b > DBL_MAX + 4*a*c))
+    if ((4*a*c < 0) && (b*b > DBL_MAX + 4*a*c)){
+        printf("4\n");
         return result;
+    }
 
     if (b*b < 4*a*c) {
         result.num = 0;
@@ -60,10 +68,14 @@ roots quadr_equation(double a, double b, double c) {
 
     double sqrt_discr = sqrt(b*b - 4*a*c);
 
-    if (fabs(a) < 1 && fabs((-b - sqrt_discr) / 2) > DBL_MAX*fabs(a))
+    if (fabs(a) < 1 && fabs((-b - sqrt_discr) / 2) > DBL_MAX*fabs(a)){
+        printf("5\n");
         return result;
-    if (fabs(a) < 1 && fabs((-b + sqrt_discr) / 2) > DBL_MAX*fabs(a))
+    }
+    if (fabs(a) < 1 && fabs((-b + sqrt_discr) / 2) > DBL_MAX*fabs(a)){
+        printf("6\n");
         return result;
+    }
 
     double x1 = (-b - sqrt_discr) / (2*a);
     double x2 = (-b + sqrt_discr) / (2*a);
