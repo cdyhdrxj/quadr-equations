@@ -19,7 +19,7 @@ jobs:
 
   sonarcloud-check:
     needs: gtest-tests
-    runs-on: ubuntu-20.04
+    runs-on: ubuntu-latest
     env:
       SONAR_SCANNER_VERSION: 4.6.1.2450 # Find the latest version in the "Linux" link on this page:
                                         # https://sonarcloud.io/documentation/analysis/scan/sonarscanner/
